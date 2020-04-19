@@ -1,2 +1,2 @@
 # ProjectEuler
-Solutions to Project Euler in a range of languages
+Solutions to [Project Euler](https://projecteuler.net/) in a range of languages (R, Python and VB.Net).
