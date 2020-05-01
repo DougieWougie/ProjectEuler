@@ -1,4 +1,6 @@
+from sys import argv
 from math import factorial
+
 
 def sum_factorial(number: int) -> int:
     count = 0
@@ -12,6 +14,19 @@ def sum_factorial(number: int) -> int:
 
     return count
 
-factor_to_sum = 100
-# print(sum_factorial(factor_to_sum))
-print(f'Solution for {factor_to_sum} is {sum_factorial(factor_to_sum)}.')
+
+def main():
+    """
+    Throw a ValueError if the argument count isn't 2.
+    """
+    try:
+        if len(argv) != 2:
+            raise ValueError
+        else:
+            print(f'Solution for {int(argv[1])} is {sum_factorial(int(argv[1]))}.')
+    except ValueError:
+        print('Need one argument - a factorial to calculate!')
+
+
+if __name__ == '__main__':
+    main()
