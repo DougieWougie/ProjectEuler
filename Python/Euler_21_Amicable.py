@@ -2,12 +2,14 @@ amicables = set()
 # LIMIT is the value tested up to
 LIMIT = 10000
 
+
 def factorize(number):
     factors = []
     for i in range(1, number):
         if number % i == 0:
             factors.append(i)
-    return(factors)
+    return (factors)
+
 
 def amicable(a):
     # Let d(n) is the sum of proper divisors of n (less than n that
@@ -22,12 +24,13 @@ def amicable(a):
             return (Da, Db)
         return (Db, Da)
 
+
 for value in range(1, LIMIT):
     test = amicable(value)
-    if test != None:
+    if test is not None:
         amicables.add(test)
 print(amicables)
-total=0
+total = 0
 for amicable in amicables:
     total = total + sum(amicable)
 print(total)
